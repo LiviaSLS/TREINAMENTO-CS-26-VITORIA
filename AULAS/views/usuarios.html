@@ -43,7 +43,153 @@
         </header>
         <!-- CONTEÚDO PRINCIPAL -->
         <main>
-   
+             <h2> CADRASTO DE USUÁRIO </h2>
+
+             <!-- FORM - ENGLOBAR TODOS OS CAMPOS DO FORMULÁRIO  -->
+             <form action=""> 
+                 <!-- fieldset - segmenta visualmente o formulario  -->
+                <fieldset>
+                     <!-- legend - titulo daquela área -->
+                     <legend> Dados pessoais </legend>
+                     <!-- input - coleta informações do usuário  -->
+                     <!-- label - suporte visual que indica o que preencher -->
+                     <!-- for - indica para quem o label serve  -->
+                     <!-- id -  identidicador único dos elementos  -->
+
+
+                     <!-- INICIO CAIXINHA NOME  -->
+                     <label for="caixa-nome" > Nome:</label>
+                     <input type = "text" id="caixa-nome">
+                     <!-- FIM CAIXINHA NOME  -->
+
+                     <br>
+                     <br>
+                     <!-- INICIO CAIXINHA IDADE  -->
+                        <label for = "caixa-idade"> Idade: </label>
+                        <input type = "number" id = "caixa-idade " >     
+                            <!-- FIM CAIXINHA IDADE  -->
+                     <br>
+                     
+                     <br>
+                     <!-- INICIO CAIXINHA CPF  -->
+                        <label for = "caixa-cpf"> CPF:</label>
+                        <input type = "number" id = "caixa-cpf " >                    <!-- FIM CAIXINHA IDADE  -->
+                         <!-- FIM CAIXINHA CPF  -->
+                     <br>
+                     
+                     <br>
+                     <!-- INICIO CAIXINHA DATA DE NASCIMENTO   -->
+                        <label for = "caixa-nasc"> Data de nascimento :</label>
+                        <input type = "datetime-local" id = "caixa-nasc " >                    <!-- FIM CAIXINHA IDADE  -->
+                         <!-- FIM CAIXINHA  DATA DE NASCIMENTO  -->
+
+                   
+    
+                </fieldset>
+                <br>
+                <fieldset>
+                    <!-- dados de login  -->
+                    <legend>Dados de login </legend>
+                    <!-- CAIXA DE EMAIL  -->
+                    <label for ="caixa-email"> Email: </label>
+                    <input type = "email" id = "caixa-email " >  
+                    <!-- FIM CAIXA DE EMAIL  -->
+
+                    <br>
+                    <br>
+
+                    <!-- CAIXA DE SENHA  -->
+                    <label for ="caixa-senha"> Senha: </label>
+                    <input type = "password" id = "caixa-senha " >  
+                    <!-- FIM DA CAIXA DE SENHA  -->
+
+                    <br>
+                    <br>
+
+                    <!-- CAIXA DE TITULO -->
+                    <label  for = "caixa-tipo "> Tipo : </label>
+                    <select id = "caixa-tipo" >
+                        <option value = "Ninguém "> SELECIONE </option>
+                        <option value = "Gestor "> Gestor </option>
+                        <option value = "Operador "> Operador </option>
+                    
+
+                    </select>
+                    <!-- FIM CAIXA DE TITULO  -->
+                </fieldset>
+                    <br>
+                    <br>
+                <fieldset>
+                    
+                    <legend>Dados para contato </legend>
+                    <!-- CAIXA DE TELEFONE -->
+                    <label for ="caixa-tel"> Telefone: </label>
+                    <input type = "tel" id = "caixa-tel " >  
+                    <!-- FIM CAIXA DE TELEFONE -->
+
+                    <br>
+                    <br>
+
+                    <!-- CAIXA DE URL -->
+                    <label for ="caixa-url"> URL: </label>
+                    <input type = "url" id = "caixa-url " >  
+                    <!-- FIM DA CAIXA DE URL -->
+
+                    <br>
+                    <br>
+                </fieldset>
+                 <br>
+                    <br>
+                <fieldset>
+                    
+                    <legend>Dados de satisfação da empresa  </legend>
+                    <!-- CAIXA DE TELEFONE -->
+                    <label for ="caixa-sat"> Satisfação com o formulário : </label> <br>
+                    <br>
+                    <label for ="caixa-pouco "> pouco satisfeito </label>
+                    0 <input type = "range" id = "caixa-salario  " > 5
+
+                    
+                    <!-- FIM CAIXA DE TELEFONE -->
+
+                    <br>
+                    <br>
+
+                    <!-- CAIXA DE URL -->
+                    <label for ="caixa-salario"> <h3> Salário que merece: </h3></label>
+                    
+
+                    <input type = "radio" id = "caixa-sat" >  
+                    <label for ="caixa-pouco"> R$ 1.600,00 a R$ 2.600,00:
+                        <input type = "radio" id = "caixa-sat" >  
+                    <label for ="caixa-umpouco"> R$ 2.700 a R$ 4.000,00 :
+                        <input type = "radio" id = "caixa-sat" > 
+                    <label for ="caixa-muito"> mais de R$ 4.000,00  :
+                    <!-- FIM DA CAIXA DE URL -->
+
+                    <br>
+                    <br>
+                        
+                    <label for ="caixa-qualidade "> <h3> qualidades:<br></h3> 
+                    <input type="checkbox"> Aprendo rápido <br>
+
+                    <input type="checkbox"> Comunicativo 
+                    <br>
+                    <input type="checkbox"> Ajudo os colegas de trabalho 
+                    <br>
+                    <input type="checkbox"> Não me atraso 
+                    <br>
+                    <input type="checkbox"> Nenhum das alternativas 
+
+                </fieldset>
+                <br>
+
+                <!-- submit - envia as informações  -->
+                <button type = "submit">Cadastrar </button>
+                <!-- reset - apaga as informações  -->
+                <button type = "reset ">Resetar </button>
+            </form>
+
         </main>
         <!-- RODAPÉ DO SITE -->
         <footer>
