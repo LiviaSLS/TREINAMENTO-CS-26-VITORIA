@@ -1,0 +1,257 @@
+/* CSS 
+
+seletor {
+    propiedade : valor 
+}
+
+*/
+
+
+/* VARIÁVEIS DE DESIGN SYSTEM */
+:root{
+    /* familia de fontes  */
+    --fonte-principal: "Segoe UI ", sans-serif;
+    --fonte-titulos : Verdana , serif ;
+
+     /*paleta de cores  */
+    --cor-primaria: #16a34a;
+    --cor-primaria-escura: #075d27;
+    --cor-secundaria: #f59e0b;
+    --cor-fundo: #f8f8f8;
+    --cor-superficie: #ffffff;
+    --cor-texto: #14532d;
+    --cor-texto-claro: #ffffff;
+    --cor-borda: #65f497;
+    --cor-destaque: #fef3c7;
+    --cor-perigo: #ff0000;
+    --cor-fundo-perigo: #ff8f8f;
+
+    /* Medidas reutilizáveis para espaçamento, bordas e sombras. */
+    --espaco-pequeno: 5px;
+    --espaco-medio: 15px;
+    --espaco-grande: 30px;
+    --borda-arredondada: 10px;
+    --sombra: 0 4px 12px rgb(15 23 42 / 12%);
+    --largura-conteudo: 1200px;
+}
+
+
+
+/* SELECIONAR TODOS OS ELEMENTOS E ZERAR AS PROPRIEDADES  */
+*{
+    /* margin - espaço do elemento para fora  */
+    margin: 0;
+    /* padding - espaço do movimento para dentro  */
+    padding: 0;
+}
+
+/* ESTILIZAÇÃO POR TAG  */
+body{
+    /* background-color troca a cor de fundo  */
+    background-color: var(--cor-fundo);
+    /* color = troca a cor do texto  */
+    color:var(--cor-texto);
+    /* font-family troca a fonte */
+    font-family: var(--fonte-principal);
+
+    min-height : 100vh;
+    display: flex ; 
+    flex-direction : column;
+    line-height: 1.6;
+
+}
+
+header {
+    background-color: var(--cor-primaria);
+    /* controla a sombra do objeto  */
+    box-shadow: var(--sombra);
+}
+
+main{
+    /* width - largura do elemento  */
+    width: 100%;
+    max-width: 1200px;
+
+    /* margin: vertical horizontal  */
+    margin: var(--espaco-grande) auto;
+
+    background-color: var(--cor-superficie);
+    padding: var(--espaco-grande);
+
+
+    /* controla a curva da borda  */
+    border-radius: var(--borda-arredondada);
+    box-shadow: var(--sombra);
+}
+
+footer{
+    background-color: var(--cor-texto);
+    color: var(--cor-texto-claro );
+    padding : var(--espaco-medio);
+    /* alinha o texto ao centro  */
+    text-align : center;
+
+}
+
+
+/* estilização via ID  */
+#titul-principal {
+color: var(--cor-primaria);
+text-align: center ;
+
+}
+/* estilização por class */
+.subtitulo{
+    /* bottom - parte de baixo do elemento  */
+    border-bottom: 5px solid var(--cor-secundaria);
+    padding-bottom: var(--espaco-pequeno);
+}
+
+.botao{
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+    border :0;
+    border-radius: var(--borda-arredondada);
+    padding: 10px 20px;
+    font-family: var(--fonte-principal);
+    /*tamanho da fonte  */
+    font-size :15px;
+    /* espessura da fonte  */
+    font-weight: bolder;
+    /* trocar o mouse  */
+    cursor:pointer;
+}
+
+/* hover - quando eu passar em cima do elemento  */
+.botao:hover{
+background-color: var(--cor-primaria-escura);
+
+}
+
+/* ESTILIZAÇÃO DA NAVEGAÇÃO  */
+
+nav {
+    width : 100%;
+    max-width: var(--largura-conteudo);
+    /* centraliza o menu no meio  */
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+/* seleciona o filho  */
+nav ul{
+    /* retirei as bolinhas  */
+    list-style: none;
+
+    /*display flex - faz os elementos se adptarem   */
+    display: flex;
+    /* gap - dá um espaço entre os elementos  */
+    gap: var(--espaco-medio) ;
+
+    /* justify-content - alinha os itens do flex  */
+    justify-content: center;
+
+    /* se não tiver espaço na linha , ele vai pra baixo  */
+    flex-wrap: wrap ; 
+}
+
+/* estilizando as opções do menu  */
+nav a {
+    color : var(--cor-texto-claro);
+    font-weight: 700;
+    /*tira a estilização do texto   */
+    text-decoration: none;
+    display: block;
+    padding: var(--espaco-medio);
+}
+
+/* quando passa o mouse em cima das opções */
+nav a:hover {
+    background-color: var(--cor-primaria-escura);
+    border-radius: var(--borda-arredondada);
+
+}
+
+/* SELECIONAR VÁRIOS ELEMENTOS AO MESMO TEMPO  */
+h1, h2, h3 {
+    font-family: var(--fonte-titulos);
+
+}
+
+/* estilizar a home  */
+#texto-destaque{
+    background-color: var(--cor-destaque) ;
+    padding: var(--espaco-medio);
+    font-size:20px;
+    border-left:5px solid var(--cor-secundaria);
+    margin-top: 20px;
+}
+#texto-perigo{
+    background-color: var(--cor-fundo-perigo) ;
+    padding: var(--espaco-medio);
+    font-size:20px;
+    border-left: 5px solid var(--cor-perigo);
+    margin-top: 20px;
+    color: var(--cor-texto-claro);
+    
+    /* retirei as bolinhas  */
+    list-style: none;
+
+    /*display flex - faz os elementos se adptarem   */
+    display: flex;
+    /* gap - dá um espaço entre os elementos  */
+    gap: var(--espaco-medio) ;
+
+    /* justify-content - alinha os itens do flex  */
+    justify-content: center;
+
+    /* se não tiver espaço na linha , ele vai pra baixo  */
+    flex-wrap: wrap ; 
+}
+
+#lista-filme {
+    background-color: var(--cor-destaque) ;
+    padding: var(--espaco-medio);
+    font-size:20px;
+    border-left:5px solid var(--cor-secundaria);
+    margin-top: 20px;
+
+     /* retirei as bolinhas  */
+    list-style: none;
+
+    /*display flex - faz os elementos se adptarem   */
+    display: flex;
+    /* gap - dá um espaço entre os elementos  */
+    gap: var(--espaco-medio) ;
+
+    /* justify-content - alinha os itens do flex  */
+    justify-content: center;
+
+    /* se não tiver espaço na linha , ele vai pra baixo  */
+    flex-wrap: wrap ; 
+}
+
+#lista-musica {
+
+      background-color: var(--cor-fundo-perigo) ;
+    padding: var(--espaco-pequeno);
+    font-family:20px;
+    border-left: 1px solid var(--cor-perigo);
+    margin-top: 20px;
+    color: var(--cor-texto-claro);
+
+    /* retirei as bolinhas  */
+    list-style: none;
+
+    /*display flex - faz os elementos se adptarem   */
+    display: flex;
+    /* gap - dá um espaço entre os elementos  */
+    gap: var(--espaco-medio) ;
+
+    /* justify-content - alinha os itens do flex  */
+    justify-content: center;
+
+    /* se não tiver espaço na linha , ele vai pra baixo  */
+    flex-wrap: wrap ; 
+}
